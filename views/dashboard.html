@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Administrador</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styledashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMoEm3zC1L6x48FJkAJHE1u/A4Frx5fFTrN2eIC" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Barra Superior -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <a class="navbar-brand font-weight-bold" href="#">Dashboard Admin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link text-light" href="#">Resumen</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">Gestión de Usuarios</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">Incidencias</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">Reportes</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="#">Configuración</a></li>
+      </ul>
+      <span class="navbar-text text-light mr-3">Bienvenido, Admin</span>
+      <button class="btn btn-outline-light my-2 my-sm-0" onclick="logout()">Cerrar Sesión</button>
+    </div>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <div class="container-fluid mt-4">
+    <h2 class="dashboard-title">Resumen General</h2>
+    <div class="row">
+      <!-- Tarjetas de Resumen -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card shadow-sm card-gradient-blue">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-users"></i> Usuarios Activos</h5>
+            <p class="card-text display-4">120</p>
+            <a href="#" class="stretched-link">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card shadow-sm card-gradient-yellow">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-exclamation-triangle"></i> Incidencias Abiertas</h5>
+            <p class="card-text display-4">32</p>
+            <a href="#" class="stretched-link">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card shadow-sm card-gradient-green">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-chart-bar"></i> Reportes Generados</h5>
+            <p class="card-text display-4">58</p>
+            <a href="#" class="stretched-link">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card shadow-sm card-gradient-gray">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-cogs"></i> Configuraciones</h5>
+            <p class="card-text display-4">5</p>
+            <a href="#" class="stretched-link">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Reportes -->
+    <h2 class="dashboard-title mt-5">Módulo de Reportes</h2>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Gráfico de Incidencias</h5>
+            <canvas id="reportChart" width="400" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Últimos Reportes Generados</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Reporte 1 - Fecha: 20/10/2024</li>
+              <li class="list-group-item">Reporte 2 - Fecha: 18/10/2024</li>
+              <li class="list-group-item">Reporte 3 - Fecha: 16/10/2024</li>
+              <li class="list-group-item">Reporte 4 - Fecha: 15/10/2024</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

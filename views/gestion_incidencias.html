@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Incidencias</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styleGestiónIncidencias.css">
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Gestión de Incidencias</h2>
+    
+    <!-- Filtro de búsqueda -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <input type="text" class="form-control" id="searchInput" placeholder="Buscar incidencia...">
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary w-100" onclick="openNewIncidentModal()">Nueva Incidencia</button>
+      </div>
+    </div>
+    
+    <!-- Tabla de incidencias -->
+    <table class="table table-hover shadow-sm">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Fecha</th>
+          <th>Tipo</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="incidentTableBody">
+        <!-- Filas dinámicas -->
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Modal para nueva incidencia -->
+  <div class="modal fade" id="newIncidentModal" tabindex="-1" aria-labelledby="newIncidentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newIncidentModalLabel">Nueva Incidencia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="newIncidentForm">
+            <div class="form-group">
+              <label for="incidentType">Tipo</label>
+              <select class="form-control" id="incidentType" required>
+                <option>Red</option>
+                <option>Equipo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="incidentDescription">Descripción</label>
+              <textarea class="form-control" id="incidentDescription" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/gestionIncidencias.js"></script>
+</body>
+</html>

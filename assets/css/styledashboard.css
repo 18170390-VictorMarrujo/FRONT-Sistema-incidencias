@@ -1,0 +1,89 @@
+/* Ruta: /assets/css/styledashboard.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+}
+
+.navbar {
+  padding: 15px 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #e9ecef !important;
+  padding: 8px 15px;
+}
+
+.navbar-text {
+  font-size: 0.9rem;
+  color: #e9ecef;
+}
+
+.dashboard-title {
+  font-weight: bold;
+  color: #343a40;
+  margin-top: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  color: #000000;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-gradient-blue {
+  background: #db8858;
+  color: #ffffff;
+}
+
+.card-gradient-yellow {
+  background: #ffc107;
+  color: #ffffff;
+}
+
+.card-gradient-green {
+  background: #28a745;
+  color: #ffffff;
+}
+
+.card-gradient-gray {
+  background: #6c757d;
+  color: #ffffff;
+}
+
+.card .card-title {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .card-title i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.shadow-sm {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+  font-size: 1rem;
+}

@@ -1,0 +1,31 @@
+/* Ruta: /assets/css/styleGestiónIncidencias.css */
+
+body {
+    background-color: #f9fafb;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  .table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table thead {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+  
+  .modal .modal-header {
+    background-color: #007bff;
+    color: white;
+  }
+  
